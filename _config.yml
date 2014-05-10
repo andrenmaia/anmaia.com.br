@@ -1,0 +1,4 @@
+name: Notas sobre código
+markdown: redcarpet
+pygments: true
+highlighter: pygments
