@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introdução a instrumentação com performance counters em C#
+title: Introdução a instrumentação com performance counters em C&#35;
 comments: true
 ---
 
