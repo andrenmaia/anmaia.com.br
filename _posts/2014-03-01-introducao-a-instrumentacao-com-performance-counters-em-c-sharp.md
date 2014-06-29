@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introdução a instrumentação com performance counters em C#
+title: Introdução a instrumentação com performance counters em C&#35;
 comments: true
 ---
 
@@ -45,7 +45,7 @@ Os contadores de performance são organizado da seguinte forma: ...Performance C
 
 Se fosse o `% de espaço livre do disco D:` a instância seria `D:`.
 
-## Criando contadores utilizando C#
+## Criando contadores utilizando C&#35;
 
 Para a certificação [70-483: Programming in C#][4] é necessário saber criar contadores de performance e armazená-los em categorias utilizando C#. A seguir, mostrarei um trecho de código para criar um contador de performance para cada tipo de contador disponível (são 5 ao todo), junto a uma categoria para agrupá-los.
 
