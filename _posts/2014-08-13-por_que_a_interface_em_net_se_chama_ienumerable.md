@@ -14,7 +14,9 @@ Após ler a referência da [MSDN][1], tentei entender o que realmente significa 
 
 Alguma coisa enumerável significa alguma coisa que se possa __contar__. Suponha que essa coisa seja um conjunto. Um conjunto enumerável é um conjunto com infinitos elementos, porém contável. A estes conjuntos é dados o nome de [conjuntos infinitos contáveis][2], e essa é uma definição matemática.
 
-Em poucas e simples (e também superficiais) palavras, toda vez que dizemos que um conjunto (ou uma coleção) é enumerável, significa que é possível contar seus elementos um-a-um, mesmo que esta coleção tenha um tamanho infinito. Parece estanho contar infinitamente, mas é matematicamente provável, pergunta para o [Georg Cantor][3].
+Em poucas e simples (e também superficiais) palavras, toda vez que dizemos que um conjunto (ou uma coleção) é enumerável, significa que é possível contar seus elementos um-a-um, mesmo que esta coleção tenha um **tamanho infinito**. Parece estanho contar infinitamente, mas é matematicamente provável, pergunta para o [Georg Cantor][3].
+
+> Se um conjunto é enumerável, ele é contável, mesmo que seja infinito.
 
 Para deixar as coisas mais claras, suponha que você foi encarregado de criar uma classe que representa uma coleção ou um cojunto de objetos e esta coleção é ilimita (estamos despresando o tamanho da sua memória RAM aqui). Essa classe que você irá deve permitir contar cada elemento presenta na coleção, porque para iterarmos sobre os elementos é necessário contarmos cada um deles e sabermos em que posição cada um está.
 
