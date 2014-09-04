@@ -23,6 +23,8 @@ exemplos:
  - http://docs.numl.net/#SupervisedLearning.html
 - http://www.refactorthis.net/post/2013/03/26/numl-a-machine-learning-library-for-NET-developers.aspx
 
+- http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/
+
 Bases de dados
 - http://archive.ics.uci.edu/ml/datasets.html
 
