@@ -1,8 +1,10 @@
 name: Notas sobre código
 permalink: '/:title'
 markdown: redcarpet
-pygments: true
 highlighter: pygments
+defaults:
+  values:
+    layout: null
 comments :
   provider : disqus
   disqus :

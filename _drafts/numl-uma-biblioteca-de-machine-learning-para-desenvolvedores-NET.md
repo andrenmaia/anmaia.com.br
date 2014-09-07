@@ -1,21 +1,21 @@
 ---
 layout: post
-title: numl - Uma biblioteca de machine learning para desenvolvedores .NET
-comments:true
+title: numl - Uma biblioteca de machine learning para desenvolvedores NET
+comments: true
 ---
 
 
-## IntroduÁ„o
+## Introdu√ß√£o
 
-InteligÍncia artificial n„o È f·cil, exige muito estudo e profundo conhecimento cientÌfico. Ali·s, para ser especialista (de verdade) em qualquer coisa È necess·rio estudo e conhecimento cientÌfico (teÛrico). PorÈm, como e por onde comeÁar?
+Intelig√™ncia artificial n√£o √© f√°cil, exige muito estudo e profundo conhecimento cient√≠fico. Ali√°s, para ser especialista (de verdade) em qualquer coisa √© necess√°rio estudo e conhecimento cient√≠fico (te√≥rico). Por√©m, como e por onde come√ßar?
 
 ## Machine Learning
 
-Muito se fala sobre _Machine Learning_ (aprendizado de m·quina[2]), um dos ramos da inteligÍncia artificial, que permite ao computador "aprender", ou melhor, permitem que o computador melhore seu desempenho em alguma tarefa.
+Muito se fala sobre _Machine Learning_ (aprendizado de m√°quina[2]), um dos ramos da intelig√™ncia artificial, que permite ao computador "aprender", ou melhor, permitem que o computador melhore seu desempenho em alguma tarefa.
 
-> Muitos programadores (isso inclui a mim) tem a terrÌvel necessidade de experimentar antes de entender. … algo quase que autom·tico. Se vocÍ tambÈm È um desses, este post È para vocÍ.
+> Muitos programadores (isso inclui a mim) tem a terr√≠vel necessidade de experimentar antes de entender. √â algo quase que autom√°tico. Se voc√™ tamb√©m √© um desses, este post √© para voc√™.
 
-Neste post apresento uma introduÁ„o sobre bibliote criada por [Seth Juarez][1] com o objetivo de auxiliar o use de algoritmos comuns de machine learning com a plataforma .NET. Esta biblioteca chama-se [numl][3]. Pela simplicidade e alto nÌvel de abstraÁ„o dessa bibliote, fica claro que o objetivo de Seth È quebrar a barreira da iniciaÁ„o por iniciante. Mesmo que vocÍ n„o entenda os principais algoritmos utilizado em machine learning (Similaridade de Cosseno, Dist‚ncia Hamming, entre outros), È possÌvel, *com poucas linha* criar um programa para prever 
+Neste post apresento uma introdu√ß√£o sobre biblioteca criada por [Seth Juarez][1] com o objetivo de auxiliar o use de algoritmos comuns de machine learning com a plataforma .NET. Esta biblioteca chama-se [numl][3]. Pela simplicidade e alto n√≠vel de abstra√ß√£o dessa biblioteca, fica claro que o objetivo de Seth √© quebrar a barreira da inicia√ß√£o para iniciante. Mesmo que voce n√£o entenda os principais algoritmos utilizado em machine learning (Similaridade de Cosseno, Dist√¢ncia Hamming, entre outros), √© poss√©vel, *com poucas linha* criar um programa para prever
 
 ## Um exemplo
 
