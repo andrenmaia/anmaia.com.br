@@ -18,7 +18,7 @@ Em poucas e simples (e também superficiais) palavras, toda vez que dizemos que 
 
 > Se um conjunto é enumerável, ele é contável, mesmo que seja infinito.
 
-Para deixar as coisas mais claras, suponha que você foi encarregado de criar uma classe que representa uma coleção ou um cojunto de objetos e esta coleção é ilimita (estamos despresando o tamanho da sua memória RAM aqui). Essa classe que você irá deve permitir contar cada elemento presenta na coleção, porque para iterarmos sobre os elementos é necessário contarmos cada um deles e sabermos em que posição cada um está.
+Para deixar as coisas mais claras, suponha que você foi encarregado de criar uma classe que representa uma coleção ou um cojunto de objetos, e esta coleção é ilimita (estamos despresando o tamanho da sua memória RAM aqui). Essa classe que você irá criar deve permitir contar cada elemento presenta na coleção, porque para iterarmos sobre os elementos é necessário contarmos cada um deles e sabermos em que posição cada um está.
 
 Considerando as definições matématicas, a forma mais sensata e simples é criar uma classe que represente conjuntos infinitos contáveis, e considerando também o que já foi dito anteriormente, todo conjunto infinito contável também é chamado de enumerável. Eis a grande sacada do nome `IEnumerable`.
 
