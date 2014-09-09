@@ -27,6 +27,7 @@ exemplos:
 
 Bases de dados
 - http://archive.ics.uci.edu/ml/datasets.html
+- https://www.maxmind.com/en/opensource
 
 
 
