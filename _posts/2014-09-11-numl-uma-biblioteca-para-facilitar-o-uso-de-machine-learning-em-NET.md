@@ -100,7 +100,7 @@ Acima, o treinamento para nossa máquina de prever se ocorrerão jogos de tênis
 
 Após aprender, imprimimos esta árvore, apenas para entendermos o que foi aprendido:
 
-![Árvore de decisão sobre os dados de jogos de tênis]({{ site.url }}/assets/arvore_de_decisao_sobre_os_dados_de_jogos_de_tenis.png)
+[![Árvore de decisão sobre os dados de jogos de tênis]({{ site.url }}/assets/arvore_de_decisao_sobre_os_dados_de_jogos_de_tenis.png)][11]
 
 A árvore acima nos mostra de uma forma simples e clara os padrões que existem nos fatos informados. Por exemplo, é possível percebe que sempre que a `Perspectiva` for `Nublado`, independente da `Temperatura`, sempre ocorrerá um jogo. E também é possível perceber que a força do vendo **não** influencia se teremos um jogo quando está nublado.
 
@@ -124,8 +124,8 @@ Tennis t = new Tennis
 Tennis predictedVal = model.Predict(t);
 ```
 
-![Previsão para um jogo de tênis]({{ site.url }}/assets/previsao_para_um_jogo.png)
-
+A seguir o resultado da previsão:
+[![Previsão para um jogo de tênis]({{ site.url }}/assets/previsao_para_um_jogo.png)][12]
 
 Pronto, só isso! Esse é o grande trunfo de Seth. Ele permitiu que com pouquíssimas informações sobre inteligência artificial, e com um objetivo claro em mente, é possível criar um algoritmo de aprendizado de máquina para prever/classificar informação sobre um conjunto de fatos apresentados.
 
@@ -156,3 +156,5 @@ Bases de dados para teste de aprendizado de máquina.
  [8]: http://archive.ics.uci.edu/ml/datasets.html
  [9]: https://www.maxmind.com/en/opensource
  [10]: https://github.com/andrenmaia/numl-playground
+ [11]: {{ site.url }}/assets/arvore_de_decisao_sobre_os_dados_de_jogos_de_tenis.png
+ [12]: {{ site.url }}/assets/previsao_para_um_jogo.png
