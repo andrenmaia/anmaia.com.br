@@ -1,4 +1,10 @@
-# Composição e agregação: Tem diferença?
+---
+layout: post
+title: Composição e agregação têm diferenca?
+comments: true
+---
+
+# Composição e agregação têm diferença?
 
 A diferença entre composição e agregação tem relação com a existência dos objetos. Essa diferença não é tratada pelas linguagens de programação que seguem o paradigma orientado a objetos (pelo menos não as convencionais: java, c#, c++).
 
