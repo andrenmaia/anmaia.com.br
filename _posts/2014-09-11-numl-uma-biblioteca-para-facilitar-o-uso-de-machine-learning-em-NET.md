@@ -124,6 +124,9 @@ Tennis t = new Tennis
 Tennis predictedVal = model.Predict(t);
 ```
 
+![Previsão para um jogo de tênis]({{ site.url }}/assets/previsao_para_um_jogo.png)
+
+
 Pronto, só isso! Esse é o grande trunfo de Seth. Ele permitiu que com pouquíssimas informações sobre inteligência artificial, e com um objetivo claro em mente, é possível criar um algoritmo de aprendizado de máquina para prever/classificar informação sobre um conjunto de fatos apresentados.
 
 ## Conclusão
