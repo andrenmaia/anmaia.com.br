@@ -15,7 +15,7 @@ Muito se fala sobre _Machine Learning_ ([aprendizado de máquina][2]), um dos ra
 
 > Muitos programadores (isso inclui a mim) tem a terrível necessidade de experimentar antes de entender. É algo quase que automático. Se você também é um desses, este post é para você.
 
-Neste post apresento uma introdução sobre a biblioteca criada por [Seth Juarez][1] com o objetivo de auxiliar o use de algoritmos comuns de machine learning com a plataforma .NET. Esta biblioteca chama-se [numl][3]. Pela simplicidade e alto nível de abstração dessa biblioteca, fica claro que o objetivo de Seth é quebrar a barreira da iniciação para iniciante. Mesmo que você não entenda os principais algoritmos utilizado em machine learning (Similaridade de Cosseno, Distância de Hamming, entre outros), é possível, *com poucas linhas* criar um programa para prever alguma coisa.
+Neste post apresento uma introdução sobre a biblioteca criada por [Seth Juarez][1] com o objetivo de auxiliar o uso de algoritmos comuns de machine learning com a plataforma .NET. Esta biblioteca chama-se [numl][3]. Pela simplicidade e alto nível de abstração dessa biblioteca, fica claro que o objetivo de Seth é quebrar a barreira da iniciação para iniciante. Mesmo que você não entenda os principais algoritmos utilizado em machine learning (Similaridade de Cosseno, Distância de Hamming, entre outros), é possível, *com poucas linhas* criar um programa para prever alguma coisa.
 
 ## Um exemplo
 
