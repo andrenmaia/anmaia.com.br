@@ -66,7 +66,7 @@ Sendo assim, toda vez que destruirmos o todo, a parte que é única e exclusiva 
 
 Essa também é uma relação todo/parte, porém, nesse caso dizemos que a parte é compartilhada por outros (por isso agregação compartilhada). Isso significa que a parte de um tipo `A` está contida em um tipo `B`, quando esse tem relação de agregação entre eles, porém, essa mesma parte `A` não existe somente para **compor** `B`, essa parte pode agregar outros tipos.
 
-### Em suma
+### Resumindo
 
 Estabelecemos o que são agregações de composição e compartilhada, agora que os nomes fazem sentido podemos exemplificar da seguinte forma:
 
