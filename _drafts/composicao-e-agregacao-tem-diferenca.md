@@ -1,20 +1,23 @@
 ---
 layout: post
-title: Composição e agregação têm diferenca?
+title: ComposiÃ§Ã£o e agregaÃ§Ã£o tÃªm diferenÃ§a?
 comments: true
 ---
 
-# Composição e agregação têm diferença?
+# ComposiÃ§Ã£o e agregaÃ§Ã£o tÃªm diferenÃ§a?
 
-A diferença entre composição e agregação tem relação com a existência dos objetos. Essa diferença não é tratada pelas linguagens de programação que seguem o paradigma orientado a objetos (pelo menos não as convencionais: java, c#, c++).
+A diferenÃ§a entre composiÃ§Ã£o e agregaÃ§Ã£o tem relaÃ§Ã£o com a existÃªncia dos objetos. Essa diferenÃ§a nÃ£o Ã© tratada pelas linguagens de programaÃ§Ã£o que seguem o paradigma orientado a objetos (pelo menos nÃ£o as convencionais: java, c#, c++).
 
-Toda vez que temos composição, significa que _a parte não existe sem o todo_. 
-Toda vez que temos agregação, significa que _a parte pode ser compartilhada entre vários objetos_.
+Toda vez que temos composiÃ§Ã£o, significa que _a parte nÃ£o existe sem o todo_. 
 
-> Este artigo vem de uma pergunta no [pt.stackoverflow.com][2]. Além deste artigo, vale dar uma olhada nas outras respostas que surgiram por lá.
+Toda vez que temos agregaÃ§Ã£o, significa que _a parte pode ser compartilhada entre vÃ¡rios objetos_.
 
-## Orientação a objetos ou UML?
-O comportamento de agregação não pertence exclusivamente ao paradigma orientado a objetos. Temos o mesmo comportamento no paradigma imperativo. É o caso das estruturas em C. Veja um exemplo:
+> Este artigo vem de uma pergunta no [pt.stackoverflow.com][2]. AlÃ©m deste artigo, vale dar uma olhada nas outras respostas que surgiram por lÃ¡.
+
+
+## OrientaÃ§Ã£o a objetos ou UML?
+
+O comportamento de agregaÃ§Ã£o nÃ£o pertence exclusivamente ao paradigma orientado a objetos. Temos o mesmo comportamento no paradigma imperativo. Ã‰ o caso das estruturas em C. Veja um exemplo:
 
 ```c
 struct Person
@@ -24,7 +27,7 @@ struct Person
 	enum { male, female } sex;
 };
 ```
-_age, name e sex compõem o tipo Person_ 
+_age, name e sex compÃµem o tipo Person_ 
 
 ```c
 struct bintree
@@ -34,50 +37,54 @@ struct bintree
 };
 ```
 
-_bintree é composta de left e right, que são bintree_. Composição reflexiva.
+_bintree Ã© composta de left e right, que sÃ£o bintree_. ComposiÃ§Ã£o reflexiva.
 
-Veja o conceito de composição descrito em várias [linguagens que não são orientadas a objetos na wikipedia][3].
-
-## Tipos de associação em UML
-Quando falamos de _agregação_ e _composição_ estamos falando de casos especiais de tipos de associação entre classes. Existem, em UML, associações: simples, agregação, generalização, dependência, realização (e devem existir outra que não me recordo agora).
-
-O tipo de associação **agregação** pode ser classificada basicamente de duas forma: agregação de composição e agregação compartilhada (ou reflexiva).
-
-### Agregações
-Esse tipos de relação são chamados assim porque agregam valor para o objeto relacionado. Esse é um tipo especializado de associação que permite nos permite encara a relação entre os objetos como: Todo/Parte.
-
-Todo/Parte significa que um dos lados da associação (um classe) é chamado de Todo e o outro lado é chamado de Parte, já que a parte nos permite pensage que: A **Parte** está contidade no **Todo**
-
-### Composição (ou agregação de composição)
-Toda vez que dizemos que a relação entre duas classe é de **composição** estamos dizendo que uma dessas classe (a Parte) está contida na outra (o Todo) e a parte não vive/não existe sem o todo.
-
-Sendo assim, toda vez que distruirmos o todo, a parte que é única e exclusiva do todo se vai junto. Por esse motivo que algum disse que: a parte _está contida_ no todo. Quando se jogo o todo fora, a parte estava dentro e se vai junto.
-
-### Agregação (ou agregação compartilhada)
-Essa também é uma relação todo/parte, porém, nesse caso dizemos que a parte é compartilhada por outros (por isso agregação compartilhada). Isso significa que a parte de um tipo `A` está contida em um tipo `B`, quando esse tem relação de agregação entre eles, porém, essa mesma parte `A` não existe somente para **compor** `B`, essa parte pode agregar outros tipos.
-
-### Concluindo a ideia *<< **Trocar esse título**
-
-*>> **Este trecho está errado**
-Estabelecemos o que são agregações de agregação compartilhada, agora que os nomes fazem sentido podemos exemplificar da seguinte forma:
-<<*
-
-* Composição (Agregação de composição)
->  É necessário que exista pelo menos um item em uma nota fiscal para que a nota fiscal exista.
-
-_Logo_: NotaFiscal é composta de ItemNotaFiscal.
-
-* Agregação (agregação compartilhada)
-> Se eu tiver um sistema de cadastro de times, preciso cadastras várias pessoas para agregar os times, assim, cada pessoa pode agregar um time, nenhum time, ou vários times. A pessoa é independente do time, mas agrega valor a ele.
-
-_Logo_: Time é agregado por Pessoa.
+Veja o conceito de composiÃ§Ã£o descrito em vÃ¡rias [linguagens que nÃ£o sÃ£o orientadas a objetos na wikipedia][3].
 
 
+## Tipos de associaÃ§Ã£o em UML
 
-#### Não há diferença na implementação e sim no comportamento
-Em ambos os tipo de relação não há diferença no momento da implementação, veja um exemplo em C#:
+Quando falamos de _agregaÃ§Ã£o_ e _composiÃ§Ã£o_ estamos falando de casos especiais de tipos de associaÃ§Ã£o entre classes. Existem, em UML, associaÃ§Ãµes: simples, agregaÃ§Ã£o, generalizaÃ§Ã£o, dependÃªncia, realizaÃ§Ã£o (e devem existir outras que nÃ£o me recordo agora).
 
-**Composição**
+O tipo de associaÃ§Ã£o **agregaÃ§Ã£o** pode ser classificada basicamente de duas forma: agregaÃ§Ã£o de composiÃ§Ã£o e agregaÃ§Ã£o compartilhada (ou reflexiva).
+
+
+### AgregaÃ§Ãµes
+Esse tipos de relaÃ§Ã£o sÃ£o chamados assim porque agregam valor para o objeto relacionado. Esse Ã© um tipo especializado de associaÃ§Ã£o que nos permite encarar a relaÃ§Ã£o entre os objetos como: Todo/Parte.
+
+Todo/Parte significa que um dos lados da associaÃ§Ã£o (um classe) Ã© chamado de **Todo** e o outro lado Ã© chamado de **Parte**, jÃ¡ que a parte nos permite pensar que: A **Parte** estÃ¡ contida no **Todo**.
+
+
+### ComposiÃ§Ã£o (ou agregaÃ§Ã£o de composiÃ§Ã£o)
+
+Toda vez que dizemos que a relaÃ§Ã£o entre duas classe Ã© de **composiÃ§Ã£o** estamos dizendo que uma dessas classe (a Parte) estÃ¡ contida na outra (o Todo) e a parte nÃ£o vive/nÃ£o existe sem o todo.
+
+Sendo assim, toda vez que destruirmos o todo, a parte que Ã© Ãºnica e exclusiva do todo se vai junto. Por esse motivo que algum dizem que: a parte _estÃ¡ contida_ no todo. Quando se jogo o todo fora, a parte estava dentro e se vai junto.
+
+
+### AgregaÃ§Ã£o (ou agregaÃ§Ã£o compartilhada)
+
+Essa tambÃ©m Ã© uma relaÃ§Ã£o todo/parte, porÃ©m, nesse caso dizemos que a parte Ã© compartilhada por outros (por isso agregaÃ§Ã£o compartilhada). Isso significa que a parte de um tipo `A` estÃ¡ contida em um tipo `B`, quando esse tem relaÃ§Ã£o de agregaÃ§Ã£o entre eles, porÃ©m, essa mesma parte `A` nÃ£o existe somente para **compor** `B`, essa parte pode agregar outros tipos.
+
+### Em suma
+
+Estabelecemos o que sÃ£o agregaÃ§Ãµes de composiÃ§Ã£o e compartilhada, agora que os nomes fazem sentido podemos exemplificar da seguinte forma:
+
+* ComposiÃ§Ã£o (AgregaÃ§Ã£o de composiÃ§Ã£o)
+>  Ã‰ necessÃ¡rio que exista pelo menos um item em uma nota fiscal para que a nota fiscal exista.
+
+_Logo_: NotaFiscal Ã© composta de ItemNotaFiscal.
+
+* AgregaÃ§Ã£o (agregaÃ§Ã£o compartilhada)
+> Se eu tiver um sistema de cadastro de times, preciso cadastras vÃ¡rias pessoas para agregar os times, assim, cada pessoa pode agregar um time, nenhum time, ou vÃ¡rios times. A pessoa Ã© independente do time, mas agrega valor a ele.
+
+_Logo_: Time Ã© agregado por Pessoa.
+
+**NÃ£o hÃ¡ diferenÃ§a na implementaÃ§Ã£o e sim no comportamento**
+
+Em ambos os tipo de relaÃ§Ã£o nÃ£o hÃ¡ diferenÃ§a no momento da implementaÃ§Ã£o, veja um exemplo em C#:
+
+**ComposiÃ§Ã£o**
 ```java
 class NotaFiscal: IDisposable {
 	IList<ItemNotaFiscal> Itens {get;set;}
@@ -86,7 +93,7 @@ class NotaFiscal: IDisposable {
 class ItemNotaFiscal: IDisposable { ... }
 ```
 
-**Agregação**
+**AgregaÃ§Ã£o**
 
 ```java
 class Time {
@@ -96,7 +103,7 @@ class Time {
 class Pessoa {}
 ```
 
-Porém, os comportamentos **semânticos** das associações devem estar presentes quanto a existência. Para composição, por exemplo, poderíamos forçar que toda vez que uma nota seja criada, uma nova lista de ItemNotaFiscal deve ser criado. E toda vez que a nota fiscal for apagada, os itens devem ser destruídos. 
+PorÃ©m, os comportamentos **semÃ¢nticos** das associaÃ§Ãµes devem estar presentes quanto a existÃªncia. Para composiÃ§Ã£o, por exemplo, poderÃ­amos forÃ§ar que toda vez que uma nota seja criada, uma nova lista de ItemNotaFiscal deve ser criado. E toda vez que a nota fiscal for apagada, os itens devem ser destruÃ­dos. 
 
 ```java
 class NotaFiscal {
@@ -113,35 +120,37 @@ class NotaFiscal {
 	}
 }
 ```
-Assim, os item serão destruídos junto com a nota fiscal.
+Assim, os item serÃ£o destruÃ­dos junto com a nota fiscal.
 
-Para agregação não seria necessário esses tratamento de criação e destruição de objetos. Já que as parte podem ser compartilhadas.
+Para agregaÃ§Ã£o nÃ£o seria necessÃ¡rio esses tratamento de criaÃ§Ã£o e destruiÃ§Ã£o de objetos. JÃ¡ que as parte podem ser compartilhadas.
 
 
-### Agregações e multiplicidade são diferentes
-Muitos acham que _toda vez que existir um agregação/composição teremos uma lista/array das partes_, porém, o que nos diz se teremos mais de um tipo associado é a **multiplicidade** e não o tipo de associação. Independente do tipo de associação, a multiplicidade pode ser: 0,1,* ou n..m. Então, toda vez que uma associação for 1 para 1, não temos listas em nenhum dos lados.
+**AgregaÃ§Ãµes e multiplicidade sÃ£o diferentes**
+
+Muitos acham que _toda vez que existir um agregaÃ§Ã£o/composiÃ§Ã£o teremos uma lista/array das partes_, porÃ©m, o que nos diz se teremos mais de um tipo associado Ã© a **multiplicidade** e nÃ£o o tipo de associaÃ§Ã£o. Independente do tipo de associaÃ§Ã£o, a multiplicidade pode ser: 0,1,* ou n..m. EntÃ£o, toda vez que uma associaÃ§Ã£o for 1 para 1, nÃ£o temos listas em nenhum dos lados.
 
 Veja um exemplo:
 
-[![inserir a descrição da imagem aqui][4]][4]
+[![inserir a descriÃ§Ã£o da imagem aqui][4]][4]
 
 ```java
 class Carro
 {
-	Motor UnicoEExclusivoMoto {get;set;}
+	Motor UnicoEExclusivoMotor {get;set;}
 }
 
 class Motor{}
 ```
 
-Nesse caso, o `Motor` é único e exclusivo para o `Carro`. E toda vez que o `Carro` for destruído, o `Motor` será destruído também.
+Nesse caso, o `Motor` Ã© Ãºnico e exclusivo para o `Carro`, e toda vez que o `Carro` for destruÃ­do, o `Motor` serÃ¡ destruÃ­do tambÃ©m.
 
-Esse engano ocorre porque, na maioria das vezes em que um objetos está relacionado a uma coleção de outros objetos, essa associação expresse um dos tipos de agregação. Associações de agregação onde não ocorrem coleções são incomum por conta disso.
+Esse engano ocorre porque na maioria das vezes em que um objetos estÃ¡ relacionado a uma coleÃ§Ã£o de outros objetos, essa associaÃ§Ã£o expressa um dos tipos de agregaÃ§Ã£o. AssociaÃ§Ãµes de agregaÃ§Ã£o onde nÃ£o ocorrem coleÃ§Ãµes sÃ£o incomuns por conta disso.
 
-## Conclusão
-Agregação ou composição são tipo de relação entre dois objetos/tipos. Cada um dos tipos de associação está relacionado ao comportamento entre os objetos e com a existência desses de acordo com o conceito todo/parte.
+## ConclusÃ£o
 
-Agregações não nada haver com multiplicidade. Embora, na maioria das vezes, objetos associados a uma coleção de outros objetos expressem, em suas relações, um comportamento de agregação.
+AgregaÃ§Ã£o ou composiÃ§Ã£o sÃ£o tipo de relaÃ§Ã£o entre dois objetos/tipos. Cada um dos tipos de associaÃ§Ã£o estÃ¡ relacionado ao comportamento entre os objetos e com a existÃªncia desses de acordo com o conceito todo/parte.
+
+AgregaÃ§Ãµes nÃ£o tem nada haver com multiplicidade. Embora, na maioria das vezes, objetos associados a uma coleÃ§Ã£o de outros objetos expressem, em suas relaÃ§Ãµes, um comportamento de agregaÃ§Ã£o.
 
   [1]: http://i.stack.imgur.com/ARGKS.png
   [2]: http://pt.stackoverflow.com/questions/25619/composi%C3%A7%C3%A3o-e-agrega%C3%A7%C3%A3o-quais-as-diferen%C3%A7as-e-como-usar/25628#25628
