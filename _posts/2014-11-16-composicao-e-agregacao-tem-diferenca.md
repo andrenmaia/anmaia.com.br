@@ -131,7 +131,7 @@ Muitos acham que _toda vez que existir um agregação/composição teremos uma l
 
 Veja um exemplo:
 
-[![inserir a descrição da imagem aqui][4]][4]
+[![Composição não é multiplicidade][4]
 
 ```java
 class Carro
