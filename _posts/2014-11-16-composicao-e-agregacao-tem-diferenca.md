@@ -71,11 +71,13 @@ Essa também é uma relação todo/parte, porém, nesse caso dizemos que a parte
 Estabelecemos o que são agregações de composição e compartilhada, agora que os nomes fazem sentido podemos exemplificar da seguinte forma:
 
 * Composição (Agregação de composição)
+
 >  É necessário que exista pelo menos um item em uma nota fiscal para que a nota fiscal exista.
 
 _Logo_: NotaFiscal é composta de ItemNotaFiscal.
 
 * Agregação (agregação compartilhada)
+
 > Se eu tiver um sistema de cadastro de times, preciso cadastras várias pessoas para agregar os times, assim, cada pessoa pode agregar um time, nenhum time, ou vários times. A pessoa é independente do time, mas agrega valor a ele.
 
 _Logo_: Time é agregado por Pessoa.
@@ -131,7 +133,7 @@ Muitos acham que _toda vez que existir um agregação/composição teremos uma l
 
 Veja um exemplo:
 
-[![inserir a descrição da imagem aqui][4]][4]
+[![Composição não é multiplicidade][4]
 
 ```java
 class Carro
