@@ -6,13 +6,13 @@ comments: true
 
 # Como criar testes unitários para exceções em .NET
 
-Quanto se utiliza teste unitários é muito fácil testar o que é verdadeiro e o que é falso, ou seja, os fatos baseados no fluxo básico de uma aplicação/componente. Porém, como testar os fluxo de exceção?
+Quanto se utiliza testes unitários é muito fácil testar o que é verdadeiro e o que é falso, ou seja, os fatos baseados no fluxo básico de uma aplicação/componente. Porém, como testar os fluxo de exceção?
 
 Para mostrar o problema, vamos utilizar o código simples a seguir.
 
 	class Person 
 	{
-		public int Idade {get;private set}
+		public int Idade {get;private set;}
 		
 		public Person(int idade)
 		{
@@ -21,7 +21,8 @@ Para mostrar o problema, vamos utilizar o código simples a seguir.
 		
 		public void Check()
 		{
-			if (this.Idade <= 0)
+			// Verifica se a pessoa é menor de idade.
+			if (this.Idade < 18)
 				throw new UnderageException();
 		}
 	}
@@ -32,7 +33,7 @@ O teste do caso básico, quando uma pessoa é preenchida corretamente, é simple
 	class PersonTest
 	{
 		
-		public void PersonValidation_AgeIsCorrectFilled_PersonInstance()
+		public void Person_PersonWithCorrectAgeFilled_ValidPersonInstance()
 		{
 			//
 			// Arrange
@@ -51,7 +52,7 @@ O teste do caso básico, quando uma pessoa é preenchida corretamente, é simple
 		}
 	}
 	
-Porém, como validar se ocorreu a exceção `UnderageException`? A forma mais simples e prática para fazer a validação é utilizar a anotação `ExpectedExceptionAttribute`. Veja um exemplo:
+Porém, como criar um teste para validar se ocorreu a exceção `UnderageException`? A forma mais simples e prática para fazer o teste é utilizando a anotação `ExpectedExceptionAttribute`. Veja um exemplo:
 
 
 	[TestMethod]
@@ -61,13 +62,13 @@ Porém, como validar se ocorreu a exceção `UnderageException`? A forma mais si
 		//
 		// Arrange
 		//
-		var expected = 0;
+		var person = new Person(10);
 
 		//
 		// Act
 		//
-	    	var person = new Person(10);
+		person.Check();
 	}
 
 
-Nesse caso eu espero que esse teste, ao chegar ao final, dispare uma exceção do tipo `UnderageException`. Usando essa anotação, você economiza a verificação da exceção manual (com `if`'s por exemplo). Além de melhorar a leitura do código.
+Nesse caso eu espero que esse teste, ao chegar no final, dispare uma exceção do tipo `UnderageException`. Usando essa anotação, você economiza a verificação da exceção manual (com `if`'s por exemplo). Além de melhorar a leitura do código.
