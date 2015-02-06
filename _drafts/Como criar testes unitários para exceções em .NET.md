@@ -43,12 +43,12 @@ O teste do caso básico, quando uma pessoa é preenchida corretamente, é simple
 			//
 			// Act
 			//
-		    	var person = new Person(20);
-		    	
-		    	//
-		    	// Assert
-		    	//
-		    	Assert.AreEqual(expected, person.Idade);
+			var person = new Person(20);
+
+			//
+			// Assert
+			//
+			Assert.AreEqual(expected, person.Idade);
 		}
 	}
 	
