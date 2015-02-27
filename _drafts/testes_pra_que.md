@@ -1,8 +1,8 @@
 #Testes pra quê?!
 
-Muitas vezes escuto a frase "testes pra quê?!" no ambiente de desenvolvimento de software. Eu também já disse a mesma frase vez ou outra e hoje tenho outra opinião sobre os testes. Explico o porque:
+Muitas vezes escuto a frase "testes pra quê?!" no ambiente de desenvolvimento de software. Eu também já disse a mesma frase vez ou outra e hoje tenho outra opinião sobre os testes. Explico o porquê:
 
-Testes não são apenas teste. Os teste são a comprovação/validação de que o seu trabalho (o código) foi feito de forma adequada, de forma que ninguém poderá questionar sua verdade.
+Testes não são apenas testes. Os teste são a comprovação/validação de que o seu trabalho (o código) foi feito de forma adequada, de forma que ninguém poderá questionar sua verdade.
 
 A forma mais fácil de se escrever um testes é encontrar os **fatos** incontestáveis à respeito do código que será executado. Para cada fato, um teste. Verificando todos os fatos envolvidos no seu código, o seu código estará seguro.
 
@@ -43,7 +43,7 @@ public class CalculartorServiceTest{
 
 ```
 
-Esse simples teste os expões todos os fatos envolvidos na operação de soma de dois inteiros. Basicamente, os teste nos diz que ´e permitido: 
+Esses simples testes expõem todos os fatos envolvidos na operação de soma de dois inteiros. Basicamente, os teste nos diz que é permitido: 
 
 1. Somar dois números inteiros positivos;
 1. Somar dois números inteiros negativos;
@@ -53,4 +53,4 @@ Esse simples teste os expões todos os fatos envolvidos na operação de soma de
 
 Aí está a garantia necessária que mostra que o que foi feito está funcionando conforme o esperado.
 
-Então não se engane, se você ainda usa a frase "testes pra quê?!", significa que você está fazendo o seu trabalho incompleto, e todos saber o que acontece com trabalhos incompletos...
+Então não se engane, se você ainda usa a frase "testes pra quê?!", significa que você está fazendo o seu trabalho incompleto, e todos sabem o que acontece com trabalhos incompletos...
