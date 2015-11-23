@@ -1,0 +1,236 @@
+Relatório de avaliação do ORM Entinty Framework
+========
+
+* Introdução
+Neste relatório serão apresentados os prós e constras da 
+ferramenta ORM Entity Framework (EF), com o intuíto de utilizá-lo 
+na geração de código com a ferramenta Genesys para a criação 
+dos novos _template_ baseados na tecnologia ASP.NET MVC.
+
+
+* Objectivo
+Entender as limitações da ferramenta e quais os benefícios e
+malefícios na geração de código utilizando a tecnologia ASP.NET
+MVC da Microsoft.
+
+* Requisitos
+
+A seguir serão elencados alguns requisitos básicos para a utilização
+do EF para os novos templates ASP.NET MVC utilizando o Genesys.
+
+ a. Como capturar eventos antes e após savar as entidades no banco de
+ dados (BeforeSave e AfterSave)?
+ 
+ b. Como extender as classes Business Entity (BE) para métodos de negócio,
+ como toHtml, toString, etc?
+
+ c. É possível organizar as classes de modelo em domínios/pacotes utilizando
+ os diagramas do EF?
+ 
+ d. Como funciona o Lazy Load no EF?
+	virtual modifier do C#, veja [3].
+	
+	O EF tem várias formas de ler dados relacionados, que são:
+	- Lazy Loading:
+		Quando uma query é executada apenas para ler os dados da entidade prin-
+		cipal e N queries são executadas para ler os dados das entidades 
+		relacionadas. Exemplo:
+		
+		departaments = context.Departaments
+		foreach(var d in departaments) <-- Query: all departaments
+		{
+			foreach(var c in d.Courses) <-- Query: Course rows related to 
+			{										departament d
+				courseList.add(d.Name + c.Title);
+			}
+		}
+		
+	
+	- Eager Loading:
+		Quando os dados para a entidade principal é lido e todos os dados 
+		necessários são lidos juntos, porém com uma única consulta no banco
+		de dados (um join). No EF é possível especificar quais entidades devem
+		ser lidas (adicionadas no join) no momento da consulta.
+		
+		departaments = context.Departaments.Include(x => x.Courses) <-- Informa qual
+																		a entidade 
+																		que dever ser
+																		lida junto a
+																		consulta para
+																		departamento
+		foreach(var d in departaments) <-- Query: all departament row and related 
+		{										Course rows.
+			foreach(var c in d.Courses) 
+			{
+				courseList.add(d.Name + c.Title);
+			}
+		}
+		
+		
+	- Explicit Loading:
+		Quando a entidade não está "atachada" ao _object state manager_ e é necessário
+		ler suas referências/coleções. Similar ao Lazy Load, porém a chamada é feita 
+		de forma explícita e não por uma propriedade de navegação.
+		
+		departaments = context.Departaments.ToList();
+		foreach(var d in departaments) <-- Query: all departament rows 
+		{
+			context.Entry(d).Collection(x => x.Courses).Load(); <-- Query: Course rows 
+																	related to departament 
+																	d.
+			foreach(var c in d.Courses) 
+			{
+				courseList.add(d.Name + c.Title);
+			}
+		}
+		
+ _Lazy_ e _Explicit Loading_ são conhecidos como _deferred loading_ ("carregamento adiado").
+ Por default o EF gera o código utilizando _Lazy Load_. Como recomendação em [5], o Lazy Load
+ deve ser desativado em momentos com serialização de objetos, levando em consideração um ca-
+ deia complexa de objetos. Nesses casos o _lazy load_ mais atrapalharia do que ajudaria.
+ No contexto de serialização de objetos é justificável a utilização de _Explicit Load_. Para
+ esses casos é mais performático o programador "des/ativar" os carregamentos necessários para
+ a consulta no banco, evetando _round trip_ desnecessários.
+ 
+ Há duas formas de desativar o lazy load:
+  - Para uma propriedade de navegação:
+	Omitir o virtual.
+  - Para todas as entidades:
+	this.Configuration.LazyLoadingEnabled = false;
+	
+	
+		
+ 
+ e. Como criar pesquisas dinamicamente? Considerando os recursos de Rules do 
+ Genesys.
+ 
+ f. Como identificar estados das entidades?
+	db.Entry(student).State == EntityState.Modified, veja [1].
+  
+  
+ g. Como funciona o mecanismo de Cache de objetos no EF? 
+ O EF usa um mecanismo internos para cache. Suponha a proposição:
+ 
+	Para relação N:N em UML, a estrutura de entitidades contém uma 
+	tabela intermediária (chamada join table). Então em duas consultas
+	distintas para a mesma entidade o EF faz apenas uma única consulta no 
+	banco de dados para preencher os objetos consultados.
+ 
+ 
+ 
+	MER:
+	
+	+//////////////////+				+--------+
+	| CourseInstructor | -*----------1- | Pessoa |
+	+///////|//////////+				+--------+
+			*								^
+			|								|
+			|							----|------------
+			|							|				|
+			1							|				|
+		+---|----+					+----------+	+---------+
+		| Course |					|Instructor|	| Student |	
+		+--------+					+----------+	+---------+
+	
+	.:. CourseInstructor é uma relação
+
+	UML:
+
+										+--------+
+										| Pessoa |
+										+--------+
+											^
+											|
+										----|------------
+										|				|
+										|				|
+		+--------+					+----------+	+---------+
+		| Course |-*--------------*-|Instructor|	| Student |	
+		+--------+					+----------+	+---------+	
+		
+
+	
+	
+	
+	código:
+	
+		var course = (from c in db.Courses
+					 where c.CourseID == 2021
+					 select c)/*.Include(x => x.Instructors)*/.Single();
+
+		var instructor = (from i in db.Instructors
+						  where i.PersonID == 9
+						  select i).Single();
+
+
+		var v = false;
+		var i1 = course.Instructors.Single();
+		var i2 = instructor;
+		if (i1 == i2)
+			v = true;
+
+		Console.Write(v); // True
+		
+	C.Q.D. Os objetos i1 e i2 são os mesmos objetos, porque ocorreu apenas uma consulta
+	no banco de dados.
+ 
+ h.Como são tratados problemas de referências cíclicas?
+ 
+ i. Campos calculados?
+  - Criar apenas os get nos acessores.
+  
+ j. Qual as estruturas nos bancos de dados para N to N.
+  -  join table:
+		modelBuilder.Entity<Course>()
+             .HasMany(c => c.Instructors).WithMany(i => i.Courses)
+             .Map(t => t.MapLeftKey("CourseID")
+                 .MapRightKey("InstructorID")
+                 .ToTable("CourseInstructor"));
+ k. Controle de concorrência de dados (Optimistic Concurrency)
+  - permite o controle com uma coluna rowversion (timestamp) para controle
+  da versão da linha.
+  
+ l. Herança [7]
+	1. table-per-hierarchy: uma tabela com todas as informações (1 tabela)
+		- garante melhor performance, não utiliza join complexo.
+	2. table-per-type : uma tabela para cada tipo (3 tabelas) 
+		- necessário join
+	3. Table per Concrete class (TPC): uma tabela para cada tipo concreto (2 tabelas)
+		- problema em consulta polimorfica (com a base); subquery quando pesquisa pela base.
+	
+	
+
+
+* Conclusões
+
+* Referências
+* Ler
+ [1] Add/Attach and Entity States - http://msdn.microsoft.com/en-us/data/jj592676
+ [2] Configuring/Mapping Properties and Types with the Fluent API - http://msdn.microsoft.com/en-us/data/jj591617
+ [3] Veja com [6], Demystifying Entity Framework Strategies: Loading Related Data - http://msdn.microsoft.com/en-us/magazine/hh205756.aspx
+ [4] Entity Framework Code First Tutorial Supplement: What is Going on in a Fluent API Call - http://blogs.msdn.com/b/aspnetue/archive/2011/05/04/entity-framework-code-first-tutorial-supplement-what-is-going-on-in-a-fluent-api-call.aspx
+ [5] Reading Related Data with the Entity Framework in an ASP.NET MVC Application (5 of 10 ) - http://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
+ [6] Using the Entity Framework to Reduce Network Latency to SQL Azure - http://msdn.microsoft.com/en-us/magazine/gg309181.aspx
+ [7] Inheritance with EF Code First: Part 1 – Table per Hierarchy (TPH) - http://weblogs.asp.net/manavi/archive/2010/12/24/inheritance-mapping-strategies-with-entity-framework-code-first-ctp5-part-1-table-per-hierarchy-tph.aspx
+ 
+* Data Patterns
+ [a] Models (POCO), Entity Framework and Data Patterns - http://www.codeproject.com/Articles/615499/Models-POCO-Entity-Framework-and-Data-Patterns
+ [b] POCO in the Entity Framework 4: Part 1 - The Experience - http://blogs.msdn.com/b/adonet/archive/2009/05/21/poco-in-the-entity-framework-part-1-the-experience.aspx
+ [c] Working with POCO Entities - http://msdn.microsoft.com/en-us/library/vstudio/dd456853(v=vs.100).aspx
+ [d] Entity Framework / Linq to Sql Poco Code Generator - https://msormcodegen.codeplex.com/
+ [e] Walkthrough: POCO Template for the Entity Framework - http://blogs.msdn.com/b/adonet/archive/2010/01/25/walkthrough-poco-template-for-the-entity-framework.aspx
+ [f] Self-Tracking Entities - http://msdn.microsoft.com/en-us/data/jj613924.aspx
+ [g] Self-Tracking Entities - Walkthrough - http://msdn.microsoft.com/en-us/data/jj613941.aspx
+ [h] Data tracking - http://en.wikipedia.org/wiki/Change_data_capture
+ [i] TDD para ASP.NET MVC - http://msdn.microsoft.com/en-us/library/ff847525.aspx
+ 
+ [j] The Repository Pattern - http://msdn.microsoft.com/en-us/library/ff649690.aspx
+ [k] Using Repository and Unit of Work patterns with Entity Framework 4.0 - http://blogs.msdn.com/b/adonet/archive/2009/06/16/using-repository-and-unit-of-work-patterns-with-entity-framework-4-0.aspx
+ 
+ 
+ Persistency ignorance
+  - What are the benefits of Persistence Ignorance? - http://stackoverflow.com/questions/905498/what-are-the-benefits-of-persistence-ignorance 
+  - The Unit Of Work Pattern And Persistence Ignorance - http://msdn.microsoft.com/en-us/magazine/dd882510.aspx
+  
+ Business Logic Layer
+  - Chapter 7: Business Layer Guidelines - http://msdn.microsoft.com/en-us/library/ee658103.aspx

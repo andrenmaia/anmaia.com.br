@@ -1,0 +1,22 @@
+---
+layout: post
+title: O Mantra do TDD
+comments: true
+---
+
+O _Test-driven Development_ (TDD) faz com que quem o pratique trabalhe em um loop infinito de construção e melhoria. Esse loop está intimamente relacionado ao ciclo de construção e melhoria contínua estabelecido no manisto de projeto ágil.
+
+A ideia é que o ciclo de desenvolvimento seja latente na mente de quem está desenvolvimento qualquer coisa utilizando as técnicas de TDD, por isso foi criado o mantra: "vermelhor, verde, refatorar... vermelhor, verde, refatorar... vermelhor, verde, refatorar...".
+
+Na prática, esse mantra é dividido em 5 passos, descritos a seguir:
+
+1. Adicionar um teste;
+2. Rodar todos os testes;
+3. Escrever algum código;
+4. Rodar todos os testes;
+5. Refatorar o código
+
+Repita todos os passos de forma contínua e incremental.
+
+
+
