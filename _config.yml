@@ -11,8 +11,16 @@ email: andrenmaia@gmail.com
 description: Notas sobre código é um blog que compartilha dicas e formas de programação com várias linguagens diferentes.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://anmaia.com.br" # the base hostname & protocol for your site
-twitter_username: andrenmaia
+
+# Social usernames
+email: andrenmaia@gmail.com
 github_username:  andrenmaia
+twitter_username: andrenmaia
+linkedin_username: andrenmaia
+goodreads_username: 17931907-andr-maia
+stackoverflow_username: anmaia
+
+# Permalink config
 permalink: 'posts/:title'
 
 # Build settings

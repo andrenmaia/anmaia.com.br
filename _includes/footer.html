@@ -46,13 +46,46 @@
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            <a href="https://github.com/{{site.github_username}}" title="" onclick="_gaq.push(['_trackEvent', 'Social Icons', 'Click', 'Github']);" target="_blank">
+              <i class="fa fa-github"></i>
+              <span class="username">{{site.github_username}}</span>
+            </a>
           </li>
           {% endif %}
 
           {% if site.twitter_username %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            <a href="https://twitter.com/{{site.twitter_username}}" title="" onclick="_gaq.push(['_trackEvent', 'Social Icons', 'Click', 'Twitter']);" target="_blank">
+              <i class="fa fa-twitter"></i>
+              <span class="username">{{site.twitter_username}}</span>
+            </a>
+          </li>
+          {% endif %}
+
+          {% if site.linkedin_username %}
+          <li>
+            <a href="http://www.linkedin.com/in/{{site.linkedin_username}}" title="Meu perfil profissional" onclick="_gaq.push(['_trackEvent', 'Social Icons', 'Click', 'LinkedIn']);" target="_blank">
+              <i class="fa fa-linkedin-square"></i>
+              <span class="username">linkedin</span>
+            </a>
+          </li>
+          {% endif %}
+
+          {% if site.goodreads_username %}
+          <li>
+            <a href="http://www.goodreads.com/user/show/{{site.goodreads_username}}" id="sidebar-github" title="O que eu gosto de ler está aqui." onclick="_gaq.push(['_trackEvent', 'Social Icons', 'Click', 'Goodreads']);" target="_blank">
+              <i class="fa fa-bookmark"></i>
+              <span class="username">goodreads</span>
+            </a>
+          </li>
+          {% endif %}
+
+          {% if site.stackoverflow_username %}
+          <li>
+            <a href="http://pt.stackoverflow.com/users/6588/{{site.stackoverflow_username}}" id="sidebar-stackoverflow" class="icon-comments" title="Minhas contribuições ao StackOverflow" target="_blank">
+              <i class="fa fa-stack-overflow"></i>
+              <span class="username">profile</span>
+            </a>
           </li>
           {% endif %}
         </ul>
