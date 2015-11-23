@@ -1,0 +1,22 @@
+<header class="site-header">
+
+  <div class="hero" style="background: url('/img/front.jpg') no-repeat center center;">
+    <h1 class="display_title">{{ site.title }}</h1>
+  </div>
+
+</header>
+
+<div class="wrapper">
+  <div class="trigger">
+    {% for my_page in site.pages %}
+      {% if my_page.title %}
+      <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      {% endif %}
+    {% endfor %}
+
+    <a class="page-link" href="/">Posts</a>
+
+    <hr/>
+
+  </div>
+</div>
