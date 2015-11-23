@@ -2,6 +2,8 @@
 layout: post
 title: Introdução a Teoria da Computação
 comments: true
+redirect_from:
+  - /introducao-a-teoria-da-computacao
 ---
 
 

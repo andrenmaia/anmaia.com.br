@@ -2,6 +2,8 @@
 layout: post
 title: Testes pra quê?!
 comments: true
+redirect_from:
+  - /testes-pra-que
 ---
 
 Muitas vezes escuto a frase "testes pra quê?!" no ambiente de desenvolvimento de software. Eu também já disse a mesma frase vez ou outra e hoje tenho outra opinião sobre os testes. Explico o porquê:

@@ -2,6 +2,8 @@
 layout: post
 title: Introdução a instrumentação com performance counters em C&#35;
 comments: true
+redirect_from:
+  - /introducao-a-instrumentacao-com-performance-counters-em-c-sharp
 ---
 
 ## Introdução

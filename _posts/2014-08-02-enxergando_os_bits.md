@@ -2,6 +2,8 @@
 layout: post
 title: Enxergando os bits
 comments: true
+redirect_from:
+  - /enxergando-os-bits
 ---
 
 

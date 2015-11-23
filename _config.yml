@@ -13,7 +13,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://anmaia.com.br" # the base hostname & protocol for your site
 twitter_username: andrenmaia
 github_username:  andrenmaia
-permalink: '/:title'
+permalink: 'posts/:title'
 
 # Build settings
 markdown: redcarpet
+
+# Redirect
+gems:
+  - jekyll-redirect-from
