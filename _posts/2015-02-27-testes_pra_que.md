@@ -4,11 +4,12 @@ title: Testes pra quê?!
 comments: true
 redirect_from:
   - /testes-pra-que
+img: /img/testes-pra-que.jpeg
 ---
 
 Muitas vezes escuto a frase "testes pra quê?!" no ambiente de desenvolvimento de software. Eu também já disse a mesma frase vez ou outra e hoje tenho outra opinião sobre os testes. Explico o porquê:
 
-Testes não são apenas testes. Os teste são a comprovação/validação de que o seu trabalho (o código) foi feito de forma adequada, de forma que ninguém poderá questionar sua verdade.
+Testes não são apenas testes. Os teste são a comprovação/validação de que o seu trabalho (o código) foi feito de forma adequada, de forma que ninguém poderá questionar sua verdade. E também, que você pode dormir em paz ;)
 
 A forma mais fácil de se escrever um testes é encontrar os **fatos** incontestáveis à respeito do código que será executado. Para cada fato, um teste. Verificando todos os fatos envolvidos no seu código, o seu código estará seguro.
 

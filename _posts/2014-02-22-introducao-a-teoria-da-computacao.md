@@ -17,9 +17,9 @@ Após a leitura da introdução, logo percebi como o assunto é interessante e f
 
 ## Os três temas centrais
 
-Sipser, em seu livro, afirma que a Teoria da Computação é centrada em três grandes temas: Complexidade, Computabilidade e Autômatos, e os três temas são utilizados para responder um pergunta simple, de se entender, porém, difícil de responder:
+Sipser, em seu livro, afirma que a Teoria da Computação é centrada em três grandes temas: Complexidade, Computabilidade e Autômatos, e os três temas são utilizados para responder um pergunta simples, de se entender, porém, difícil de responder:
 
-> Quais são as **capacidade** e **limitações fundamentais** dos computadores?
+> Quais são as **capacidades** e **limitações fundamentais** dos computadores?
 
 De acordo com Sipser, esta é uma pergunta que vem "tirando o sono" de muitos matemáticos, dês da época de **Kurt Gödel, Alan Turing e Alonso Church** até hoje. E é daí, desse tipo de problema, que surgiu a Teoria da Computação.
 
@@ -48,16 +48,16 @@ Até o momento estamos apenas falando de matemática e quase nada de computaçã
 
 A resposta utilizada para tal pergunta remete aos autômatos.
 
-Os autômatos são utilizados para expressar modelos computacionais. Sendo assim, sempre que necessário testar e comprovar alguma teoria matemática no campo da computação é possível criar essa ponte, com os autômatos fazendo o papel de máquinas teórias computáveis.
+Os autômatos são utilizados para expressar modelos computacionais. Sendo assim, sempre que necessário testar e comprovar alguma teoria matemática no campo da computação é possível criar essa ponte, com os autômatos fazendo o papel de máquinas teóricas computáveis.
 
 ## Conclusão
 Assim como em outras áreas das ciências, o ser humano tenta encontrar os limites do que está lindando. Nessa caso, a Teoria da Computação tenta encontrar "a capacidade e limitações fundamentais dos computadores", utilizando, pelo menos, três recursos:
 
 1. **Complexidade:** classificar se o problema é fácil ou difícil de se resolver;
-2. **Computabilidade:** classificar se o problema adimite solução matemática;
-3. **Autômatos:** criar uma solução ou algoritmo para resolução do problemas no ambiente da computação.
+2. **Computabilidade:** classificar se o problema admite solução matemática;
+3. **Autômatos:** criar uma solução ou algoritmo para resolução do problema no ambiente da computação.
 
-Esse é o grande desafio e o facínio dessa área. Simples e brilhando.
+Esse é o grande desafio e o fascínio dessa área. Simples e brilhante.
 
 ## Referências
 * [Introdução a Teoria da Computação - Michael Sipser](http://www.livrariacultura.com.br/scripts/resenha/resenha.asp?nitem=2095542&amp;idlink=8104&amp;utm_source=buscape&amp;utm_medium=comparadores&amp;utm_term=nome-produto&amp;utm_campaign=categoria)
