@@ -9,7 +9,7 @@
 title: André Maia
 email: andrenmaia@gmail.com
 description: Notas sobre código é um blog que compartilha dicas e formas de programação com várias linguagens diferentes.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://anmaia.com.br" # the base hostname & protocol for your site
 
 # Social usernames
