@@ -4,6 +4,7 @@ title: numl - Uma biblioteca para facilitar o uso de machine learning em .NET
 comments: true
 redirect_from:
    - /numl-uma-biblioteca-para-facilitar-o-uso-de-machine-learning-em-net/
+   - /numl-uma-biblioteca-para-facilitar-o-uso-de-machine-learning-em-NET/
 ---
 
 
