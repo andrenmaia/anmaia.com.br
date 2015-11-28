@@ -2,7 +2,6 @@
 layout: page
 title: Sobre
 permalink: /about/
-img: /img/me.jpg
 ---
 
 ### Eu sou André Maia.
