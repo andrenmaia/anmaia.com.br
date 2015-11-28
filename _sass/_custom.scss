@@ -1,0 +1,100 @@
+h1, h2, h3, h4, h5, h6 {
+    color: $brand-color;
+    font-weight: bold;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: 3em;
+    line-height: 1.6;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-color: #fd7f05;
+    background-position: center center;
+    background-size: cover !important;
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.display_title {
+    background-color: rgb(255, 255, 255);
+    color: $brand-color;
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    height: 64px;
+    line-height: 64px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0px;
+    text-align: center;
+    width: 254.844px;
+    word-break: break-word;
+    vertical-align: middle;
+}
+
+
+.trigger {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.3em;
+}
+
+.trigger > a {
+    color: $brand-color;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.trigger > a:hover {
+    text-decoration: none;
+    color: $brand-color;
+    background-color: $brand-color-alpha;
+    padding: 10px;
+}
+
+
+.trigger > hr {
+    border: 0;
+    height: 2px;
+    width: 25%;
+    margin-left: 37.5%;
+    margin-top: 20px; 
+    background-color: $brand-color;
+    text-align: center;
+}
+
+.posts{
+    list-style: none;
+    margin-left: 0;
+}
+
+
+.posts > li > a {
+    text-decoration: none;
+}
+
+.posts > li > a > div {
+    margin:10px;
+}
+
+.title {
+    width: 78%;
+    display: inline-block;
+}
+
+.date {
+    float: right;
+    font-size: 0.8em;
+    width: 20%;
+    display: inline-block;
+    text-align: right;
+}
