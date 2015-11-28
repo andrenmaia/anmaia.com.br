@@ -2,6 +2,8 @@
 layout: post
 title: Por que a interface em .Net se chama IEnumerable?
 comments: true
+redirect_from:
+  - /por-que-a-interface-em-net-se-chama-ienumerable
 ---
 
 Recentemente, refletindo sobre como dar o nome para objetos/classes, parei para examinar os nomes dados aos objetos no framework .NET. Um nome que sempre achei estranho era `IEnumerable`. Por que `IEnumerable`? Por que não `IIterable` ou coisas do tipo, já que essa interface permite que, para quem a implementa, expor um enumerador que suporta uma iteração simples sobre uma coleção não gerérica, conforme a definição na [MSDN][1]:

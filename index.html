@@ -1,13 +1,23 @@
 ---
-layout: default
-title: André Maia
+layout: page
+permalink: /index
 ---
 
-<ul id="posts" class="twelve columns offset-by-four">
-  {% for post in site.posts %}
+{% for post in site.posts %}
+  {% assign currentdate = post.date | date: "%Y" %}
+  {% if currentdate != date %}
+    {% unless forloop.first %}</ul>{% endunless %}
+    <h3 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h3>
+    <ul class="posts">
+    {% assign date = currentdate %}
+  {% endif %}
     <li>
-      <a class="nine columns" href="{{ post.url }}">{{ post.title }}</a>
-      <span class="two columns">{{ post.date | date: "%b %Y" }}</span>
+    	<a href="{{ post.url }}">
+    		<div>
+    			<div class="title">{{ post.title }}</div>
+    			<div class="date">{{ post.date | date: '%B %d, %Y' }}</div>
+    		</div>
+    	</a>
     </li>
-  {% endfor %}
-</ul>
+  {% if forloop.last %}</ul>{% endif %}
+{% endfor %}

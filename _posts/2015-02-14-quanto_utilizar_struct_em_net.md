@@ -2,6 +2,8 @@
 layout: post
 title: Quanto utilizar struct em .NET
 comments: true
+redirect_from:
+  - /quanto-utilizar-struct-em-net
 ---
 
 Estruturas devem ser utilizadas somente quando expressarem a unicidade; quando estiverem relacionadas a um único valor. Exemplos de estruturas são: `Money` e `DateTime`. Essas estruturas expressão um único valor, que são: um valor monetário e uma data com hora, ambos são atômicos/indivisíveis.
