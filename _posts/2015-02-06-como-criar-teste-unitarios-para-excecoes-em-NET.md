@@ -3,7 +3,7 @@ layout: post
 title: Como criar testes unitários para exceções em .NET
 comments: true
 redirect_from:
-  - /como-criar-teste-unitarios-para-excecoes-em-net
+  - /como-criar-teste-unitarios-para-excecoes-em-net/
 ---
 
 Quanto se utiliza testes unitários é muito fácil testar o que é verdadeiro e o que é falso, ou seja, os fatos baseados no fluxo básico de uma aplicação/componente. Porém, como testar os fluxo de exceção?

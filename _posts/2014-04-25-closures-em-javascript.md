@@ -3,7 +3,7 @@ layout: post
 title: Closures em Javascript
 comments: true
 redirect_from:
-  - /closures-em-javascript
+  - /closures-em-javascript/
 ---
 
 _Closure_ é uma recurso presente nas linguagens do paradigma funcional. Uma linguagem que tem uma base muito forte nesse paradigma (e é a linguagem mais utiliza atualmente), é a Javascript.
