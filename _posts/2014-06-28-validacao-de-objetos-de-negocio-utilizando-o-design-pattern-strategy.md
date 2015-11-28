@@ -3,7 +3,7 @@ layout: post
 title: Validação de objetos de negócio utilizando o design pattern Strategy
 comments: true
 redirect_from:
-  - /validacao-de-objetos-de-negocio-utilizando-o-design-pattern-strategy
+  - /validacao-de-objetos-de-negocio-utilizando-o-design-pattern-strategy/
 ---
 
 ## Introdução

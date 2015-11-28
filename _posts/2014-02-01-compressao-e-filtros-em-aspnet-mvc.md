@@ -3,7 +3,7 @@ layout: post
 title: Compressão e filtros em ASP.NET MVC
 comments: true
 redirect_from:
-  - /compressao-e-filtros-em-aspnet-mvc
+  - /compressao-e-filtros-em-aspnet-mvc/
 ---
 
 

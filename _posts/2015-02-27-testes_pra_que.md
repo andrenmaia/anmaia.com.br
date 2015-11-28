@@ -3,7 +3,7 @@ layout: post
 title: Testes pra quê?!
 comments: true
 redirect_from:
-    - /testes-pra-que
+    - /testes-pra-que/
 img: /img/testes-pra-que.jpeg
 ---
 
