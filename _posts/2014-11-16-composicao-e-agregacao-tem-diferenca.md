@@ -87,6 +87,7 @@ _Logo_: Time é agregado por Pessoa.
 Em ambos os tipo de relação não há diferença no momento da implementação, veja um exemplo em C#:
 
 **Composição**
+
 ```java
 class NotaFiscal: IDisposable {
 	IList<ItemNotaFiscal> Itens {get;set;}
