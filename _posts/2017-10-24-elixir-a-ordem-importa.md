@@ -2,8 +2,6 @@
 layout: post
 title: A ordem importa
 comments: true
-redirect_from:
-    - /a-ordem-importa/
 ---
 
 Quando falamos de `pattern matching` em Elixir a ordem importa!
