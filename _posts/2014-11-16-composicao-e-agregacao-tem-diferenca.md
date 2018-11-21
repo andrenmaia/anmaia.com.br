@@ -135,6 +135,10 @@ Muitos acham que _toda vez que existir um agregação/composição teremos uma l
 Veja um exemplo:
 
 ![Composição não é multiplicidade][4]
+<figure>
+	<img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg" width="30px">
+	<figcaption>Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</figcaption>
+</figure>
 
 ```java
 class Carro

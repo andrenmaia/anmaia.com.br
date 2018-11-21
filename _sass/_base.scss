@@ -23,6 +23,7 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    font-stretch: 100%;
 }
 
 
@@ -45,6 +46,9 @@ ul, ol, dl, figure,
 img {
     max-width: 100%;
     vertical-align: middle;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
 }
 
 
@@ -92,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
     color: $brand-color;
-    // text-decoration: none;
+    text-decoration: none;
 
     &:visited {
         color: darken($brand-color, 15%);
@@ -100,7 +104,7 @@ a {
 
     &:hover {
         color: $text-color;
-        // text-decoration: underline;
+        text-decoration: underline;
     }
 }
 
@@ -110,13 +114,13 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $brand-color;
+    color: $text-color;
     padding:20px;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;    
-    background-color: $brand-color-alpha;
-    border-radius: 5px;
+    font-size: 0.9em;
+    // letter-spacing: -1px;    
+    background-color: $grey-color-light;
+    border-radius: 2px;
 
     > :last-child {
         margin-bottom: 0;
@@ -148,12 +152,12 @@ pre,
 code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
-    border-radius: 3px;
+    border-radius: 2px;
     // background-color: $grey-color-light;
     // background: #eef;
     // background-color: $code-color;
     // background-color: $brand-color-alpha-dark;
-    background-color: $code-color;
+    background-color: $grey-color-light;
 }
 
 code {
