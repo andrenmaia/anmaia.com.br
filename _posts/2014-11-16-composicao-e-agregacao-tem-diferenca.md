@@ -135,10 +135,6 @@ Muitos acham que _toda vez que existir um agregação/composição teremos uma l
 Veja um exemplo:
 
 ![Composição não é multiplicidade][4]
-<figure>
-	<img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg" width="30px">
-	<figcaption>Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</figcaption>
-</figure>
 
 ```java
 class Carro
@@ -159,7 +155,7 @@ Agregação ou composição são tipo de relação entre dois objetos/tipos. Cad
 
 Agregações não tem nada haver com multiplicidade. Embora, na maioria das vezes, objetos associados a uma coleção de outros objetos expressem, em suas relações, um comportamento de agregação.
 
-  [1]: http://i.stack.imgur.com/ARGKS.png
-  [2]: http://pt.stackoverflow.com/questions/25619/composi%C3%A7%C3%A3o-e-agrega%C3%A7%C3%A3o-quais-as-diferen%C3%A7as-e-como-usar/25628#25628
-  [3]: http://en.wikipedia.org/wiki/Object_composition#Composite_types_in_C
-  [4]: {{ site.url }}/assets/composicao_vs_multiplicidade.png
+[1]: http://i.stack.imgur.com/ARGKS.png
+[2]: http://pt.stackoverflow.com/questions/25619/composi%C3%A7%C3%A3o-e-agrega%C3%A7%C3%A3o-quais-as-diferen%C3%A7as-e-como-usar/25628#25628
+[3]: http://en.wikipedia.org/wiki/Object_composition#Composite_types_in_C
+[4]: {{ site.url }}/assets/composicao_vs_multiplicidade.png

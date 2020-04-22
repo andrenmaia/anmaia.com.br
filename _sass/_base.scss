@@ -61,7 +61,9 @@ figure > img {
 }
 
 figcaption {
-    font-size: $small-font-size;
+    font-size: $half_font_size + 0.2em;
+    text-align: center;
+    margin: 2em;
 }
 
 

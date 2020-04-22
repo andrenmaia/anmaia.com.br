@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: André Maia
+title: André Maia Blog
 email: andrenmaia@gmail.com
 description: Notas sobre código é um blog que compartilha dicas e formas de programação com várias linguagens diferentes.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -24,12 +24,11 @@ stackoverflow_username: anmaia
 permalink: 'posts/:title'
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 
 # Redirect
 gems:
   - jekyll-redirect-from
-
 
 # Comment system
 comments:
