@@ -7,7 +7,7 @@ redirect_from:
 excerpt: Um guia prático sobre o que são e qual a ordem das certificações AWS obter
 ---
 
-Já trabalho a vários anos com a AWS. Trabalhei bastante no passado, fiquei um
+Já trabalho há vários anos com a AWS. Trabalhei bastante no passado, fiquei um
 tempo sem trabalhar (uns 2 anos), e agora estou trabalhando novamente. Percebi
 que muitas coisas mudaram nessa breve pausa, mas os fundamentos permanecem os
 mesmos, e uma das formas mais sólidas de se aprender esses fundamentos é obtendo
