@@ -16,10 +16,10 @@ para obter essa certificação.
 
 > **Certificação como guia**
 >
-> Na minha opinião, certificação não valem para mostrar que você sabe qualquer
+> Na minha opinião, certificações não valem para mostrar que você sabe qualquer
 > coisa, mas elas têm algo muito mais valioso: um guia completo e bem estruturado
 > de como dominar alguma tecnologia. Então, sugiro obter a certificação como uma
-> forma de guiar os estudos para um determinada tecnologia, e não para mostrar que
+> forma de guiar os estudos para uma determinada tecnologia, e não para mostrar que
 > você sabe alguma coisa.
 
 Uma coisa que percebi é que quando você não conhece os serviços e estruturas
